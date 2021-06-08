@@ -1,6 +1,6 @@
 .navbar{
   background:lightblue;
   display:flex;
-  justify-content: space-between;
-  padding:.6rem .6rem 2rem 2rem;
+  justify-content: end;
+  padding:1rem 5rem
 }
