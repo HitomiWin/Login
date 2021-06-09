@@ -10,13 +10,15 @@ export default function ListContextProvider(props) {
     getAllPersons()
   }, [])
 
-  const getAllPersons= async()=>{
+  const getAllPersons= async ()=>{
     let respons = await fetch("/api/v1/lists/persons")
     if(respons.status ===404){
+      
       setMessage(respons.error)
  
     } else if(respons.status === 200){
-      respons = await res.json();
+      console.log(respons)
+      respons = await respons.json();
       setPersons(respons)
       setMessage(null)   
     }
