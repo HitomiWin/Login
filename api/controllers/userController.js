@@ -22,6 +22,7 @@ const login = (req, res) => {
   // Before login check the crypted password 
     req.body.password = Encrypt.encrypt(req.body.password);
     if (userInDB.password === req.body.password) {
+  // not show password
       delete userInDB.password
       req.session.user = userInDB;
       res.json({
