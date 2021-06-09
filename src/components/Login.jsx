@@ -3,7 +3,6 @@ import styles from "../css/Form.module.css";
 export default function Login() {
   return (
     <div>
-
       <form className={styles.loginForm}>
         <h3>Login</h3>
         <div>
@@ -25,7 +24,6 @@ export default function Login() {
         />
         </div>
       </form>
-      <p className={styles.text}>Create Account ?</p>
     </div>
   );
 }
