@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   margin:5rem auto 3rem auto ;
-  padding:1rem 3rem 3rem 3rem;
+  padding:1rem 3rem 3rem 1rem;
   width:50vw;    
 }
 
@@ -26,6 +26,20 @@ h3, p{
 .text {
   color:rgb(46, 46, 168);
   text-decoration: underline;
+}
+
+.errorBox.active {
+  display: block;
+  color: red;
+}
+
+.errorBox.inactive {
+  display: none;
+}
+.logInButton {
+  margin-top: 2rem;
+  width: 60%;
+  border: none;
 }
 
 

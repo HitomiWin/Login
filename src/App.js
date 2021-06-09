@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
         <UserContextProvider>
+        <Navbar />
         <Route exact path ="/" component={Home} />
         </UserContextProvider>
       </Router>
