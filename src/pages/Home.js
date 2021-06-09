@@ -1,9 +1,9 @@
-
+import Login from "../components/Login"
 
 export default function Home() {
   return (
     <div>
-      <h3>This is Home page</h3>
+      <Login />
     </div>
   )
 }
