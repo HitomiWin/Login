@@ -7,7 +7,7 @@ export default function ListContextProvider(props) {
   const [message, setMessage] = useState(null)
 
   useEffect(() => {
-    getAllPersons
+    getAllPersons()
   }, [])
 
   const getAllPersons= async()=>{
