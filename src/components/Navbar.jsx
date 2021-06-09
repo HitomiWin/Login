@@ -1,11 +1,17 @@
-import { Link } from "react-router-dom"
-import styles from "../css/Navbar.module.css"
+import { useState, useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
+import styles from "../css/Navbar.module.css";
 
 export default function Navbar() {
-  return ( 
-    <nav className={styles.navbar}>
-      <div>Logout</div>
-    </nav>
-  )
-}
+  const { user, logout } = useContext(UserContext);
 
+  const handleOnclickLogout = async () => {
+    await logout();
+  };
+
+  return (
+    <nav className={styles.navbar}>
+      {user ? <p onClick={()=>handleOnclickLogout()}>Logout</p> : ""}
+    </nav>
+  );
+}
