@@ -8,7 +8,7 @@ const getAllPersons = (req, res) => {
   // [] is used because there is not params
   db.all(query, [], (err, persons) => {
     if (persons) {
-      res.json(persons)
+      res.status(200).json(persons)
     } else {
       res.status(404).json({
         error: "No Persons"

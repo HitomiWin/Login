@@ -14,7 +14,7 @@ const login = (req, res) => {
   };
   db.get(query, params, (err, userInDB) => {
     if (!userInDB) {
-      res.status(401).json({
+      res.status(404).json({
         error: "The user doesn't exist"
       });
       return;
