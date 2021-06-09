@@ -1,7 +1,7 @@
 const sqlite3 = require("sqlite3");
 const Encrypt = require("../Encrypt")
 const path = require("path");
-const db = new sqlite3.Database(path.join(__dirname, "../../myRadioAppDB.db"));
+const db = new sqlite3.Database(path.join(__dirname, "../../myLoginAppDB.db"));
 // Route handles goes underneath here...
 const whoami = (req, res) => {
   res.json(req.session.user || null);
@@ -68,13 +68,13 @@ const register = (req, res) => {
       db.run(query, params, function (err) {
         if (err) {
           res.status(400).json({
-            error: err
+            error: "Something wrong"
           });
           return;
         }
         res.json({
           success: "User register successfull",
-          createdUser: user
+          lastID: this.lastID,
         })
       });
     }
