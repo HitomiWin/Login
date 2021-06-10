@@ -31,5 +31,5 @@ export default function PersonsList() {
     );
   };
 
-  return <div>{persons && renderTable()}</div>;
+  return <div className={styles.listContainer}>{persons && renderTable()}</div>;
 }

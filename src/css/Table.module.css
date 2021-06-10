@@ -1,0 +1,23 @@
+.listContainer{
+  background-color: white;
+  box-shadow: 10px 5px 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  width:80vw;
+  margin:3rem auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

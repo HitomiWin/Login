@@ -23,10 +23,10 @@ export default function Login() {
       password,
     };
     let result = await login(userInfo);
-    if (result.success) {
-      setError(result.success);
-    } else {
+    if (result.error) {
       setError(result.error);
+    } else{
+      setError(null)
     }
   };
 

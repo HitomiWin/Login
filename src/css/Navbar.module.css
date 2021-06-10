@@ -1,6 +1,7 @@
 .navbar{
-  background:lightblue;
+  background:lightslategray;
   display:flex;
   justify-content: end;
-  padding:1rem 5rem
+  padding:1rem 5rem;
+  height:5vh
 }
