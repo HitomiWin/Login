@@ -19,10 +19,10 @@ const login = (req, res) => {
       });
       return;
     }
-  // Before login check the crypted password 
+    // Before login check the crypted password 
     req.body.password = Encrypt.encrypt(req.body.password);
     if (userInDB.password === req.body.password) {
-  // not show password
+      // not show password
       delete userInDB.password
       req.session.user = userInDB;
       res.json({
@@ -44,6 +44,7 @@ const logout = (req, res) => {
   });
 }
 
+// the function made to register users but not calls from front end
 const register = (req, res) => {
   let userToRegister = req.body;
   // Before trying to register the user, lets find out if the user already exists 
@@ -58,7 +59,7 @@ const register = (req, res) => {
       });
     } else {
 
-      //use Encrypt to hasha password
+      //use Encrypt to hash password
       userToRegister.password = Encrypt.encrypt(userToRegister.password);
       query = /*sql*/ `INSERT INTO users (userName, email, password) VALUES ($userName, $email, $password)`;
       params = {
