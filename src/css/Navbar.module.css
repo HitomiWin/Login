@@ -1,6 +1,24 @@
-.navbar{
-  background:lightblue;
-  display:flex;
+.navbar {
+  background: lightslategray;
+  display: flex;
   justify-content: end;
-  padding:1rem 5rem
+  align-items: center;
+  padding: 1rem 5rem;
+  height: 4vh;
+}
+.logout {
+  color: rgb(6, 71, 71);
+  font-weight: 700;
+}
+
+.logout:hover {
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    padding-right: 2rem;
+    height: 2vh;
+  }
 }

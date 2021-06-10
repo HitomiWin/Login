@@ -4,6 +4,7 @@ const path = require("path");
 const port = 3001;
 
 const userRoutes = require("./routes/userRoutes.js");
+const listRoutes = require("./routes/listRoutes.js");
 
 const app = express();
 app.use(express.json());
@@ -18,6 +19,7 @@ app.use(session({
 );
 
 app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/lists", listRoutes);
 
 app.use(express.static(path.join(__dirname, "../build")));
 app.listen(port,(err)=>{
