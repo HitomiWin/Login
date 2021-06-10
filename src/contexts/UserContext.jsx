@@ -24,6 +24,7 @@ export default function UserContextProvider (props){
       },
       body: JSON.stringify(userInfo),
     });
+    
     result = await result.json();
     getUser()
     return result

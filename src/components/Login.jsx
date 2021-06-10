@@ -23,10 +23,10 @@ export default function Login() {
       password,
     };
     let result = await login(userInfo);
-    if (result.success) {
-      setError(result.success);
-    } else {
+    if (result.error) {
       setError(result.error);
+    } else{
+      setError(null)
     }
   };
 
@@ -46,7 +46,7 @@ export default function Login() {
         >
           {error}
         </p>
-        <div>
+        <div className={styles.inputContainer}>
           <label htmlFor="email">Email:</label>
           <input
             className={styles.loginInput}
@@ -56,7 +56,7 @@ export default function Login() {
             required
           />
         </div>
-        <div>
+        <div className={styles.inputContainer}>
           <label htmlFor="password">Password:</label>
           <input
             className={styles.loginInput}
@@ -66,8 +66,8 @@ export default function Login() {
             required
           />
         </div>
-        <div>
-          <button className={styles.logInButton}>Login</button>
+        <div className={styles.logInButtonContainer}>
+          <button className={styles.logInButton} >Login</button>
         </div>
       </form>
     </div>

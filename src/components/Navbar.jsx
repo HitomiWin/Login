@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      {user ? <p onClick={()=>handleOnclickLogout()}>Logout</p> : ""}
+      {user ? <p className={styles.logout} onClick={()=>handleOnclickLogout()}>Logout</p> : ""}
     </nav>
   );
 }
