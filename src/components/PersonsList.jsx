@@ -16,6 +16,8 @@ export default function PersonsList() {
       </tr>
     ));
     return (
+      <div className={styles.info}>
+      <h3>Personal Information</h3>
       <table>
         <thead>
           <tr>
@@ -28,6 +30,7 @@ export default function PersonsList() {
         </thead>
         <tbody>{rows}</tbody>
       </table>
+      </div>
     );
   };
 
