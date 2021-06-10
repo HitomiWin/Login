@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 import styles from "../css/Navbar.module.css";
 

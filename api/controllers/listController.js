@@ -15,9 +15,8 @@ const getAllPersons = (req, res) => {
       })
     }
   });
-
-
 }
+
 module.exports = {
   getAllPersons,
 }

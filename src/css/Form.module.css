@@ -1,26 +1,27 @@
-.loginForm{
+.loginForm {
   background-color: white;
-  border-radius:10px;
+  border-radius: 10px;
   box-shadow: 10px 5px 3px rgba(0, 0, 0, 0.3);
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  margin:5rem auto 3rem auto ;
-  padding:2rem;
-  width:60vw;    
+  margin: 5rem auto 3rem auto;
+  padding: 2rem;
+  width: 60vw;
 }
 
-.loginInput{
+.loginInput {
   width: 95%;
   text-align: left;
-	border: 2px solid #ccc;
-	border-radius: 5px;
-	font-size: 13px;
-  margin:.5rem 0;
-	padding:4px 10px
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 13px;
+  margin: 0.5rem 0;
+  padding: 4px 10px;
 }
 
-h3, p{
+h3,
+p {
   text-align: center;
 }
 
@@ -29,7 +30,7 @@ h3, p{
   color: red;
 }
 
-.inputContainer{
+.inputContainer {
   display: flex;
   flex-direction: column;
 }
@@ -45,21 +46,17 @@ h3, p{
 }
 
 .logInButton {
-  background-color:lightslategray ;
-  color:rgb(6, 71, 71);
-  border-radius:3px;
-  margin-top:2rem;
-  padding:5px;
-  width:35%;
+  background-color: lightslategray;
+  color: rgb(6, 71, 71);
+  border-radius: 3px;
+  margin-top: 2rem;
+  padding: 5px;
+  width: 35%;
   border: none;
 }
 
 .logInButton:hover {
-  background-color:rgb(6, 71, 71) ;
-  color:white;
+  background-color: rgb(6, 71, 71);
+  color: white;
   cursor: pointer;
 }
-
-
-
-
