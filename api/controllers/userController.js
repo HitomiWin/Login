@@ -70,7 +70,7 @@ const register = (req, res) => {
       db.run(query, params, function (err) {
         if (err) {
           res.status(400).json({
-            error: "Something wrong"
+            error: "Something went wrong"
           });
           return;
         }
