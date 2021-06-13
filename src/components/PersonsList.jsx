@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { ListContext } from "../contexts/ListContext";
 import styles from "../css/Table.module.css";
 
@@ -17,22 +17,26 @@ export default function PersonsList() {
     ));
     return (
       <div className={styles.info}>
-      <h3>Personal Information</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Age</th>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </table>
+        <h3>Personal Information</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>{rows}</tbody>
+        </table>
       </div>
     );
   };
 
-  return <div className={styles.listContainer}>{persons && renderTable()}</div>;
+  return (
+    <div className={styles.listContainer}>
+      {persons ? renderTable() : `${message}`}
+    </div>
+  );
 }

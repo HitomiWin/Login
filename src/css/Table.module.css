@@ -1,11 +1,10 @@
-.listContainer{
+.listContainer {
   background-color: white;
-  box-shadow: 10px 5px 3px rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
-  width:70vw;
-  margin:3rem auto;
-  padding-bottom:3rem;
+  width: 70%;
+  margin: 3rem auto;
+  padding-bottom: 3rem;
 }
 
 table {
@@ -13,7 +12,8 @@ table {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 10px;
@@ -24,16 +24,23 @@ tr:nth-child(even) {
 }
 
 @media only screen and (max-width: 600px) {
-  .listContainer{
-    margin:2rem auto;
-    box-shadow:none;
-    width:92vw;
-    padding:0px;
+  .listContainer {
+    margin: 2rem auto;
+    box-shadow: none;
+    width: 90%;
+    padding: 0px;
     padding-bottom: 20px;
   }
 
-  td, th {
-    font-size:3vw;
+  td,
+  th {
+    font-size: 3vw;
     padding: 2px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .listContainer {
+    width: 80%;
   }
 }
