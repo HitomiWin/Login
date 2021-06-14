@@ -26,7 +26,7 @@ const login = (req, res) => {
       delete userInDB.password
       req.session.user = userInDB;
       res.json({
-        success: "Login successfull",
+        success: "Login successfully",
         loggedInUser: userInDB
       })
     } else {
@@ -75,7 +75,7 @@ const register = (req, res) => {
           return;
         }
         res.json({
-          success: "User register successfull",
+          success: "User register successfully",
           lastID: this.lastID,
         })
       });
